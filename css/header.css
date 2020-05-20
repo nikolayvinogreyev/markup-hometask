@@ -49,12 +49,13 @@
 /* Задаем положение логотипа */
 .header-middle__logo {
     float: left;
+    margin-right: 60px;
 }
 
 .header-middle__city-choice-label {
     display: inline-block;
     float: left;
-        margin-left: 60px;
+    margin-right: 50px;
     position: relative;
 
     font-size: 0;
@@ -70,12 +71,12 @@
     right: 15px;
     height: 1px;
 
-    border-bottom: 1px dashed #448ccb;
+    border-bottom: 1px dashed #448central-columnb;
 }
 
 .header-middle__city-choice-select {
     border: 0;
-    color: #448ccb;
+    color: #448central-columnb;
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
@@ -94,7 +95,7 @@
 /* Положение блока дата-время */
 .header-middle__time {
     float: left;
-    margin-left: 50px;
+    margin-right: 22px;
 }
 
 /* Стилизация времени в блоке дата-время */
@@ -109,7 +110,6 @@
 /* Стилизация блока погоды */
 .header-middle__weather {
     float: left;
-    margin-left: 22px;
     padding-left: 38px;
 
     background: url("../img/icon-weather-cloudy.png") no-repeat left;
@@ -206,7 +206,7 @@
     margin-top: 21px;
 }
 
-.lc {
+.left-column {
     float: left;
     padding-bottom: 25px;
 
@@ -226,16 +226,16 @@
     font-weight: bold;
 }
 
-.lc__news-list {
+.left-column__news-list {
     padding-left: 0;
     padding-top: 30px;
 }
 
-.lc__news-item:first-child {
+.left-column__news-item:first-child {
     padding-top: 0;
 }
 
-.lc__news-item {
+.left-column__news-item {
     padding-left: 18px;
     padding-top: 20px;
     padding-right: 15px;
@@ -274,7 +274,7 @@
     background-size: 11px 11px;
 }
 
-.lc__all-news-link {
+.left-column__all-news-link {
     display: block;
     margin: 37px auto 0;
 
@@ -290,18 +290,18 @@
     border-radius: 30px;
 }
 
-.cc {
+.central-column {
     float: left;
     padding-right: 19px;
     padding-left: 19px;
     width: 500px;
 }
 
-.cc__news-list {
+.central-column__news-list {
     padding-left: 0;
 }
 
-.cc__news-item {
+.central-column__news-item {
     float: left;
 }
 
@@ -346,30 +346,30 @@
 }
 /* Конец стилизации главной новости */
 
-.cc__news-item:not(:first-child) {
+.central-column__news-item:not(:first-child) {
     margin-top: 20px;
 
     width: 220px;
 }
 
-.cc__news-item:not(:first-child) .news-item__title {
+.central-column__news-item:not(:first-child) .news-item__title {
     font-weight: bold;
 }
 
-.cc__news-item:nth-child(2n) {
+.central-column__news-item:nth-child(2n) {
     margin-right: 22px;
 }
 
-.rc {
+.right-column {
     float: right;
     width: 250px;
 }
 
-.rc__banner {
+.right-column__banner {
     display: inline-block;
 }
 
-.rc__banner {
+.right-column__banner {
     margin-bottom: 15px;
 }
 

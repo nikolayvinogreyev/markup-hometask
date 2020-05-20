@@ -1,0 +1,2 @@
+1. Изменил порядок отступов в центральной части хедера, сделал их margin-right
+2. Переименовал lc в left-column, cc - central-column, rc - right-column
