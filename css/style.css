@@ -1,0 +1,103 @@
+/*
+    Свойства высоты и ширины у элемента включают
+    в себя поля (padding) и границы (border),
+    но не внешние отступы (margin)
+*/
+html {
+    box-sizing: border-box;
+}
+
+/*
+    Все элементы на страницы наследуют
+    свойство box-sizing у родителя,
+    то есть у html
+*/
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+    margin: 0;
+}
+
+
+body {
+    /*
+        Минимальная ширина элемента,
+        при которой тот остается неизменным,
+        в случае, если окно браузера меньше указанной ширины,
+        то появляется горизонтальна полоса прокрутки
+    */
+    min-width: 1000px;
+    /* Обнуленные внешние отступы у элемента */
+    margin: 0;
+    /* Цвет фона у элемента - белый */
+    background-color: #FFF;
+    /* Шрифт Arial без засечек */
+    font-family: "Arial", sans-serif;
+    /* Размер шрифта - 14 пикселей */
+    font-size: 14px;
+    /* Интерлиньяж (межстрочный интервал) - 20 пикселей */
+    line-height: 20px;
+    /* Цвет шрифта - черный */
+    color: #000;
+
+    background-color: #f9f9f9;
+}
+
+img {
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Обнуление отстутпа у ul */
+ul {
+    padding-inline-start: 0;
+}
+
+li {
+    list-style-type: none;
+}
+
+/*
+    Если содержимое блока переполнено,
+    то не отображать его, а просто обрезать
+*/
+body.modal-active {
+    overflow: hidden;
+}
+
+.visually-hidden {
+    position: absolute !important;
+    clip: rect(1px 1px 1px 1px);
+    clip: rect(1px, 1px, 1px, 1px);
+    padding: 0 !important;
+    border: 0 !important;
+    height: 1px !important;
+    width: 1px !important;
+    overflow: hidden;
+}
+
+/*
+    После элемента с классом создается
+    элемент с пустым контентом, отображением в виде таблицы,
+    обтекание которого запрещено с обеих сторон
+ */
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/*
+    Задает элементу с классом container
+    ширину 1000px и располагает его по центру
+*/
+.container {
+    width: 1000px;
+    margin: 0 auto;
+}
+

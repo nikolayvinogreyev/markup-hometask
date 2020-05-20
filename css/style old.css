@@ -1,0 +1,482 @@
+html, body {
+    min-width: 1000px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial;
+    text-decoration: none;
+}
+
+.clear {
+    clear: both;
+}
+
+.fixed-container {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.header-top-container {
+    background-color: #00122f;
+    padding-top: 18px;
+    padding-bottom: 19px;
+}
+
+.header-top {
+    font-size: 16px;
+    font-weight: normal;
+    color: #ffffff;
+}
+
+.header-top a {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+.header-top h1 {
+    float: left;
+    font-size: 16px;
+    font-weight: normal;
+    color: #ffffff;
+}
+
+.header-top-time {
+    float: right;
+}
+/* Стилизация логотипа */
+.logo-top {
+    margin-top: 40px;
+    float: left;
+}
+/* Конец стилизации логотипа */
+
+/* Стилизация выпадающего списка с городом */
+.select-wrapper {
+    display: inline-block;
+    float: left;
+    position: relative;
+    /* обнуляем шрифт, чтобы убрать текст label */
+    font-size: 0;
+    margin-top: 52px;
+    margin-left: 61px;
+}
+
+.select-wrapper::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 15px;
+    height: 1px;
+    border-bottom: 2px dashed #448ccb;
+}
+
+.custom-select {
+    border: 0;
+    color: #448ccb;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    /* Восстанавливаем шрифт */
+    font-size: 16px;
+    /* для того, чтобы задать саму стрелку:
+      1. отведем для нее место; */
+    padding-right: 15px;
+    /* добавим ее фоном */
+    background: url('../img/down-arrow.png') 100% center no-repeat;
+    background-size: 10px 5px;
+}
+/* Конец стилизации выпадающего списка с городом */
+
+/* Стилизация погоды */
+.weather {
+    float: left;
+    font-size: 15px;
+    color: #91919f;
+    background-image: url('../img/icon-weather-cloudy.png');
+    background-repeat: no-repeat;
+    background-position: 0% center;
+    padding-left: 40px;
+    margin-top: 52px;
+    margin-left: 297px;
+}
+/* Конец стилизации погоды */
+
+/* Стилизация поля поиска */
+.search {
+    float: right;
+    font-size: 14px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 21px;
+    border-radius: 25px;
+    border: none;
+    background-color: #f3f3f3;
+    width: 320px;
+    background-image: url('../img/icon-search.png');
+    background-repeat: no-repeat;
+    background-position: 93% center;
+    margin-top: 40px;
+}
+/* Конец стилизации поля поиска */
+
+/* Стилизация меню */
+.menu {
+    margin-top: 32px;
+    padding-bottom: 30px;
+}
+
+.menu__list {
+    list-style: none;
+}
+
+.menu-list-item {
+    display: inline;
+}
+
+.menu-list-item a {
+    font-size: 16px;
+    color: #000000;
+}
+
+/* Устанавливаем "/" между пунктами меню, кроме последнего */
+.menu-list-item:not(:last-child):after {
+    content: '/';
+    font-size: 20px;
+    color: #e5e5e8;
+    padding-left: 18px;
+    padding-right: 15px;
+}
+/* Конец стилизации меню */
+
+/* Добавление тени к header */
+.top-header {
+    box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.07);
+}
+/* Конец добавления тени к header */
+/* Конец стилизации хедера */
+
+/* Стилизация главного блока */
+.main-container {
+    margin-top: 10px;
+    background-color: #f9f9f9;
+}
+
+/* Стилизация левой колонки "Новости дня */
+.left-column {
+    float: left;
+    width: 250px;
+    background-color: #FFFFFF;
+    margin-top: 10px;
+    height: 100%;
+}
+
+.news-title {
+    padding-top: 27px;
+    padding-left: 18px;
+    padding-bottom: 20px;
+    font-size: 20px;
+    border-bottom: 1px solid #e5e5e5;
+    margin-bottom: 34px;
+}
+
+.news-list {
+    list-style:none;
+}
+
+.news-item {
+    margin-bottom: 28px;
+    padding-left: 18px;
+}
+
+.news-text {
+    font-size: 14px;
+    font-weight: normal;
+    padding-bottom: 19px;
+    padding-right: 20px;
+    color: #000000;
+}
+
+.news-properties {
+    font-size: 12px;
+}
+
+.news-properties:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.news-category {
+    float: left;
+    text-decoration: none;
+    color: #aaaab5;
+}
+
+.properties-right {
+    float: right;
+    padding-right: 20px;
+}
+
+.news-time {
+    background-image: url('../img/icon-clock-blue.png');
+    background-repeat: no-repeat;
+    background-position: 0% 45%;
+    padding-left: 16px;
+}
+
+.comments-count {
+    background-image: url('../img/icon-comment-blue.png');
+    background-repeat: no-repeat;
+    background-position: 0% 45%;
+    margin-left: 20px;
+    padding-left: 16px;
+}
+
+/* Стилизация ссылки Все новости */
+.btn-all-news {
+    display: inline-block;
+    font-size: 14px;
+    color: #448ccb;
+    text-decoration: none;
+    border: 2px solid #448ccb;
+    border-radius: 25px;
+    padding: 16px 50px;
+    margin-left: 38px;
+    margin-top: 16px;
+    margin-bottom: 25px;
+}
+
+/* Конец стилизации левой колонки */
+
+/* Стилизация центральной колонки */
+.central-column {
+    float: left;
+    margin-top: 10px;
+    margin-left: 20px;
+    width: 460px;
+}
+
+.main-news-list {
+    list-style: none;
+}
+/* Стилизация главной новости */
+.main-news-item:first-child {
+    position: relative;
+    width: 460px;
+    margin: 0 auto;
+}
+
+.main-news-item:first-child img {
+    position: absolute;
+    width: 460px;
+    object-fit: cover;
+}
+
+.special-news-container {
+    position: relative;
+    min-height: 320px;
+    padding-left: 20px;
+}
+
+.special-news-category {
+    display: inline-block;
+    font-size: 12px;
+    color: #ffffff;
+    margin-top: 114px;
+}
+
+.special-news-text {
+    font-size: 30px;
+    color: #ffffff;
+    margin-top: 23px;
+}
+
+.special-properties {
+    font-size: 12px;
+    color: #ffffff;
+    margin-top: 20px;
+}
+
+.special-news-time {
+    background-image: url('../img/ico-clock-white.png');
+    background-repeat: no-repeat;
+    background-position: 0% 45%;
+    padding-left: 12px;
+    margin-left: 18px;
+}
+
+/* Конец стилизации главной новости */
+.main-news-item {
+    float: left;
+    width: 220px;
+    margin-top: 20px;
+}
+
+.main-news-item img {
+    display: block;
+    width: 220px;
+}
+
+.main-news-item .news-text {
+    font-weight: bold;
+    padding-top: 10px;
+}
+
+.main-news-item:nth-child(2n) {
+    margin-right: 20px;
+}
+/* Конец стилизации центральной колонки */
+
+/* Стилизация правой колонки (баннеров) */
+.right-column {
+    width: 250px;
+    float: right;
+    margin-top: 10px;
+}
+
+.banner {
+    display: inline-block;
+    margin-bottom: 20px;
+}
+/* Конец конец стилизации правой колонки */
+
+.bottom-left-column {
+    float: left;
+}
+
+.special-news-article {
+    position: relative;
+    height: 393px;
+    width: 588px;
+}
+
+.special-news-article img {
+    position: absolute;
+    width: 588px;
+    object-fit: cover;
+}
+
+.special-news-additional-text {
+    font-size: 14px;
+    color: #ffffff;
+    opacity: 0.7;
+    padding-top: 27px;
+}
+
+.bottom-right-column {
+    float: right;
+    width: 412px;
+}
+
+.bottom-right-column h3 {
+    font-weight: bold;
+}
+/* Стилизация блока самые читаемые */
+
+/* Стилизация футера */
+footer {
+    background-color: #00122f;
+    color: #FFFFFF;
+    margin-top: 60px;
+    font-size: 16px;
+
+}
+
+footer .fixed-container {
+    padding-top: 60px;
+    height: 250px;
+}
+
+footer a {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+.footer-menu-list {
+    list-style: none;
+    padding-left: 0px;
+    margin-top: 0px;
+}
+
+.footer-left-column {
+    float: left;
+}
+
+.footer-menu-list {
+    width: 250px;
+    overflow: hidden;
+
+}
+
+.footer-menu-list-item {
+    float: left;
+    display: inline;
+    padding-bottom: 17px;
+    width: 50%;
+}
+
+.footer-central-column {
+    float: left;
+    margin-left: 180px;
+    overflow: hidden;
+}
+
+.footer-central-column img {
+    margin-bottom: 15px;
+}
+
+.footer-central-column li {
+    padding-bottom: 17px;
+}
+
+.footer-right-column {
+    float: right;
+    font-size: 18px;
+}
+
+.footer-right-column li {
+    display: inline;
+}
+
+.footer-right-column li:not(:last-child) {
+    padding-right: 20px;
+}
+
+.phone {
+    background-image: url('../img/icon-phone.png');
+    background-repeat: no-repeat;
+    background-position: center left;
+    margin-top: 35px;
+    margin-bottom: 25px;
+}
+
+.mail {
+    background-image: url('../img/icon-envelope.png');
+    background-repeat: no-repeat;
+    background-position: center left;
+}
+
+.phone,
+.mail {
+    padding-left: 30px;
+}
+
+footer .fixed-container {
+    overflow-y: hidden;
+}
+
+.copyright {
+    opacity: 40%;
+}
+
+.copyright p {
+    font-size: 14px;
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin: 0;
+}

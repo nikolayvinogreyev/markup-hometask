@@ -1,0 +1,433 @@
+.header {
+    padding-bottom: 30px;
+
+    box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.07);
+
+    font-size: 16px;
+    font-weight: normal;
+
+    background-color: #FFFFFF;
+}
+
+/* Стилизация верхней части хедера */
+.header-top {
+    padding-top: 18px;
+    padding-bottom: 17px;
+
+    background-color: #00122f;
+    color: #FFF;
+}
+
+.header-top__title {
+    float: left;
+
+    font-size: inherit;
+}
+
+.top-title__link {
+    text-decoration: underline;
+}
+
+.header-top__time {
+    float: right;
+}
+
+/* Конец стилизации верхней части хедера */
+
+/* Стилизация средней части */
+.header-middle {
+    padding-top: 40px;
+
+    color: #91919f;
+}
+
+.middle-elements-container {
+    display: inline-block;
+    padding-top: 11px;
+}
+
+/* Задаем положение логотипа */
+.header-middle__logo {
+    float: left;
+}
+
+.header-middle__city-choice-label {
+    display: inline-block;
+    float: left;
+        margin-left: 60px;
+    position: relative;
+
+    font-size: 0;
+}
+
+/* Стилизация выпадающего списка с городами */
+.header-middle__city-choice-label::after {
+    content: "";
+
+    position: absolute;
+    bottom: 3px;
+    left: 0;
+    right: 15px;
+    height: 1px;
+
+    border-bottom: 1px dashed #448ccb;
+}
+
+.header-middle__city-choice-select {
+    border: 0;
+    color: #448ccb;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    /* Восстанавливаем шрифт */
+    font-size: 16px;
+    /* для того, чтобы задать саму стрелку:
+      1. отведем для нее место; */
+    padding-right: 15px;
+    /* добавим ее фоном */
+    background: url("../img/down-arrow.png") 100% center no-repeat;
+    background-size: 10px 5px;
+}
+
+/* Конец стилизации выпадающего списка с городом */
+
+/* Положение блока дата-время */
+.header-middle__time {
+    float: left;
+    margin-left: 50px;
+}
+
+/* Стилизация времени в блоке дата-время */
+.header-middle__time .time {
+    margin-left: 30px;
+    padding-left: 26px;
+
+    background: url("../img/icon-clock-blue.png") no-repeat left;
+    background-size: 17px 17px;
+}
+
+/* Стилизация блока погоды */
+.header-middle__weather {
+    float: left;
+    margin-left: 22px;
+    padding-left: 38px;
+
+    background: url("../img/icon-weather-cloudy.png") no-repeat left;
+    background-size: 29px 21px;
+}
+
+/* Задаем положение для формы поиска */
+.header-middle__search {
+    float: right;
+    position: relative;
+}
+
+/* Стилизация поля поиска */
+.search-form__search-input {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 21px;
+    /* Добавляем отступ справа, чтобы текст не залазил под кнопку поиска */
+    padding-right: 40px;
+
+    width: 320px;
+    border-radius: 35px;
+    border: none;
+    background-color: #f3f3f3;
+
+    font-size: 14px;
+    color: #000000;
+}
+
+.search-form__search-input::placeholder {
+    color: rgba(0, 0, 0, 0.55);
+}
+
+
+/* Убираем очиюащий "х" из поля */
+.search-form__search-input::-webkit-search-decoration,
+.search-form__search-input::-webkit-search-cancel-button,
+.search-form__search-input::-webkit-search-results-button,
+.search-form__search-input::-webkit-search-results-decoration {
+    -webkit-appearance:none;
+}
+
+/* Стилизация кнопки поиска, загоняем ее внутрь input */
+.search-form__search-btn {
+    position: absolute;
+    top: 14px;
+    right: 16px;
+
+    height: 20px;
+    width: 20px;
+    border: none;
+
+    background-image: url("../img/icon-search.png");
+    background-repeat: no-repeat;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+/* Конец стилизации средней части хедера  */
+.menu {
+    padding-top: 33px;
+}
+
+.menu__list {
+    padding-left: 0;
+}
+
+/* Стилизация меню */
+.menu__list-item {
+    position: relative;
+    display: inline-block;
+}
+
+.menu__list-item:not(:last-child) {
+    margin-right: 38px;
+}
+
+.menu__list-item:not(:last-child):after {
+    content: "/";
+    position: absolute;
+    right: -23px;
+    color: #e1e1e5;
+}
+
+.menu__list-item a {
+    text-decoration: none;
+    color: inherit;
+}
+/* Конец стилизации хедера */
+
+/* Стилизация main части */
+.main-container {
+    background-color: #f9f9f9;
+    margin-top: 21px;
+}
+
+.lc {
+    float: left;
+    padding-bottom: 25px;
+
+    width: 250px;
+
+    background-color: #FFFFFF;
+}
+
+.news__title {
+    padding-left: 18px;
+    padding-bottom: 24px;
+    padding-top: 25px;
+
+    border-bottom: 1px solid #e5e5e5;
+
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.lc__news-list {
+    padding-left: 0;
+    padding-top: 30px;
+}
+
+.lc__news-item:first-child {
+    padding-top: 0;
+}
+
+.lc__news-item {
+    padding-left: 18px;
+    padding-top: 20px;
+    padding-right: 15px;
+}
+
+/* Стилизация свойств новостей */
+.news-props {
+    padding-top: 10px;
+
+    font-size: 12px;
+}
+
+.news-props__category {
+    float: left;
+
+    color: rgba(145, 145, 159, 0.8);
+}
+
+.props-right {
+    float: right;
+    padding-right: 22px;
+}
+
+.props-right__time {
+    padding-left: 16px;
+    padding-right: 15px;
+
+    background: url("../img/icon-clock-blue.png") no-repeat left;
+    background-size: 11px 11px;
+}
+
+.props-right__comments-count {
+    padding-left: 16px;
+
+    background: url("../img/icon-comment-blue.png") no-repeat left;
+    background-size: 11px 11px;
+}
+
+.lc__all-news-link {
+    display: block;
+    margin: 37px auto 0;
+
+
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    width: 177px;
+
+    color: #85afda;
+    text-align: center;
+    border: 1px solid #85afda;
+    border-radius: 30px;
+}
+
+.cc {
+    float: left;
+    padding-right: 19px;
+    padding-left: 19px;
+    width: 500px;
+}
+
+.cc__news-list {
+    padding-left: 0;
+}
+
+.cc__news-item {
+    float: left;
+}
+
+/* Стилизация главной новости */
+.news-item__special-container {
+    position: relative;
+    width: 462px;
+    min-height: 322px;
+}
+
+.news-item__special-container .news-item__image {
+    position: absolute;
+}
+
+.news-item__params {
+    position: relative;
+    top: 110px;
+    left: 21px;
+
+    font-size: 12px;
+    color: #FFFFFF;
+}
+
+.news-item__params .news-props__time {
+    display: block;
+    padding-top: 8px;
+}
+.news-item__params .news-item__title {
+    padding-top: 14px;
+
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 35px;
+}
+
+.white-time {
+    margin-left: 15px;
+    padding-left: 12px;
+
+    background: url("../img/icon-white-time.png") no-repeat left;
+    background-size: 9px 9px;
+}
+/* Конец стилизации главной новости */
+
+.cc__news-item:not(:first-child) {
+    margin-top: 20px;
+
+    width: 220px;
+}
+
+.cc__news-item:not(:first-child) .news-item__title {
+    font-weight: bold;
+}
+
+.cc__news-item:nth-child(2n) {
+    margin-right: 22px;
+}
+
+.rc {
+    float: right;
+    width: 250px;
+}
+
+.rc__banner {
+    display: inline-block;
+}
+
+.rc__banner {
+    margin-bottom: 15px;
+}
+
+.bottom-container {
+    background-color: #FFFFFF;
+
+    min-height: 393px;
+}
+
+.bottom-left {
+    float:left;
+}
+
+.bottom-right {
+    float: right;
+
+    width: 411px;
+}
+
+.bottom-container .news-item__special-container {
+    padding-right: 90px;
+
+    width: 589px;
+    min-height: 393px;
+}
+
+.news-item__special-container .news-item__text {
+    padding-top: 20px;
+
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.bottom-container__title,
+.bottom-container .news-item:not(:first-child) {
+    float: right;
+}
+
+.bottom-right .news-item__title {
+    padding-top: 28px;
+    padding-right: 30px;
+
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.bottom-container .bottom-right .news-item {
+    padding-left: 19px;
+}
+
+.bottom-container .props-right {
+    padding-right: 220px;
+}
+
+.bottom-container__title {
+    padding-top: 28px;
+    padding-right: 132px;
+
+    font-size: 20px;
+    font-weight: bold;
+}
+
